@@ -22,11 +22,11 @@ The goal is to reinforce root-word meaning through:
 
 This app was designed because research supports the value of teaching Greek and Latin roots as a way to strengthen vocabulary, reading comprehension, and academic language development.
 
-<div style="border-left: 6px solid #000000; background-color: #f6f6f6; border-radius: 8px; padding: 16px 20px; margin: 18px 0;">
-
-Research going back seven decades demonstrates that vocabulary knowledge is strongly associated with proficiency in reading comprehension. Large vocabularies lead to better reading performance (Baumann et al., 2002; Davis, 1944). Amazingly, more than 80 percent of students' reading comprehension test scores can be accounted for by vocabulary knowledge (Reutzel & Cooter, 2015). Yet, the most recent assessment of 4th, 8th, and 12th grade students' vocabulary development shows that at all three grade levels, U.S. students have demonstrated no improvement at all in their vocabulary knowledge since 2009 (National Center for Education Statistics, 2015).
-
-</div>
+> <div style="border-left: 6px solid #000000; background-color: #f6f6f6; border-radius: 8px; padding: 16px 20px; margin: 10px 0;">
+>
+> Research going back seven decades demonstrates that vocabulary knowledge is strongly associated with proficiency in reading comprehension. Large vocabularies lead to better reading performance (Baumann et al., 2002; Davis, 1944). Amazingly, more than 80 percent of students' reading comprehension test scores can be accounted for by vocabulary knowledge (Reutzel & Cooter, 2015). Yet, the most recent assessment of 4th, 8th, and 12th grade students' vocabulary development shows that at all three grade levels, U.S. students have demonstrated no improvement at all in their vocabulary knowledge since 2009 (National Center for Education Statistics, 2015).
+>
+> </div>
 
 <p><em>– Baumann et al., 2002; Davis, 1944; Reutzel & Cooter, 2015; National Center for Education Statistics, 2015</em></p>
 

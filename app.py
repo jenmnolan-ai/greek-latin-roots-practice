@@ -3,6 +3,17 @@ import random
 
 st.set_page_config(page_title="Greek & Latin Roots Practice")
 
+st.markdown("""
+<style>
+html, body, [class*="css"] {
+    font-size: 18px;
+}
+.stMarkdown, .stRadio, .stButton, .stAlert {
+    font-size: 18px !important;
+}
+</style>
+""", unsafe_allow_html=True)
+
 st.title("🌱 Greek & Latin Roots Practice")
 
 st.write("Practice root words a little at a time. Focus on patterns: root + 'ology' = study of.")
@@ -13,7 +24,7 @@ words = [
         "word": "biology",
         "root": "bio = life, ology = study of",
         "question": "What does biology mean?",
-        "options": ["Study of life", "Study of earth", "Study of stars"],
+        "options": ["Study of earth", "Study of life", "Study of stars"],
         "answer": "Study of life",
         "explanation": "Bio = life → biology = study of life."
     },
@@ -21,7 +32,7 @@ words = [
         "word": "exobiology",
         "root": "exo = outside, bio = life",
         "question": "What does exobiology mean?",
-        "options": ["Study of animals", "Study of life outside Earth", "Study of causes"],
+        "options": ["Study of animals", "Study of causes", "Study of life outside Earth"],
         "answer": "Study of life outside Earth",
         "explanation": "Exo = outside → life outside Earth."
     },
@@ -29,7 +40,7 @@ words = [
         "word": "ecology",
         "root": "eco = environment",
         "question": "What does ecology mean?",
-        "options": ["Study of the environment", "Study of time", "Study of stars"],
+        "options": ["Study of time", "Study of the environment", "Study of stars"],
         "answer": "Study of the environment",
         "explanation": "Eco = environment → study of interactions in the environment."
     },
@@ -37,7 +48,7 @@ words = [
         "word": "etiology",
         "root": "etio = cause",
         "question": "What does etiology mean?",
-        "options": ["Study of causes", "Study of animals", "Study of sound"],
+        "options": ["Study of animals", "Study of causes", "Study of sound"],
         "answer": "Study of causes",
         "explanation": "Etio = cause → study of causes."
     },
@@ -45,7 +56,7 @@ words = [
         "word": "geology",
         "root": "geo = earth",
         "question": "What does geology mean?",
-        "options": ["Study of earth", "Study of stars", "Study of family"],
+        "options": ["Study of stars", "Study of family", "Study of earth"],
         "answer": "Study of earth",
         "explanation": "Geo = earth → study of earth."
     },
@@ -53,7 +64,7 @@ words = [
         "word": "astrology",
         "root": "astro = star",
         "question": "What does astrology study?",
-        "options": ["Stars and their influence", "Animals", "Time"],
+        "options": ["Animals", "Stars and their influence", "Time"],
         "answer": "Stars and their influence",
         "explanation": "Astro = star → study of stars and influence."
     },
@@ -61,7 +72,7 @@ words = [
         "word": "genealogy",
         "root": "genea = family",
         "question": "What does genealogy mean?",
-        "options": ["Study of family history", "Study of sound", "Study of earth"],
+        "options": ["Study of sound", "Study of earth", "Study of family history"],
         "answer": "Study of family history",
         "explanation": "Genea = family → family history."
     },
@@ -69,7 +80,7 @@ words = [
         "word": "zoology",
         "root": "zoo = animal",
         "question": "What does zoology mean?",
-        "options": ["Study of animals", "Study of time", "Study of stars"],
+        "options": ["Study of time", "Study of animals", "Study of stars"],
         "answer": "Study of animals",
         "explanation": "Zoo = animal → study of animals."
     },
@@ -77,7 +88,7 @@ words = [
         "word": "chronology",
         "root": "chron = time",
         "question": "What does chronology mean?",
-        "options": ["Study of time/order of events", "Study of life", "Study of sound"],
+        "options": ["Study of life", "Study of sound", "Study of time/order of events"],
         "answer": "Study of time/order of events",
         "explanation": "Chron = time → ordering events in time."
     },
@@ -85,7 +96,7 @@ words = [
         "word": "psychology",
         "root": "psych = mind",
         "question": "What does psychology mean?",
-        "options": ["Study of the mind", "Study of animals", "Study of stars"],
+        "options": ["Study of animals", "Study of the mind", "Study of stars"],
         "answer": "Study of the mind",
         "explanation": "Psych = mind → study of the mind."
     },
@@ -93,7 +104,7 @@ words = [
         "word": "cosmology",
         "root": "cosm = universe",
         "question": "What does cosmology mean?",
-        "options": ["Study of the universe", "Study of sound", "Study of causes"],
+        "options": ["Study of sound", "Study of causes", "Study of the universe"],
         "answer": "Study of the universe",
         "explanation": "Cosm = universe → origin and development of the universe."
     },
@@ -101,7 +112,7 @@ words = [
         "word": "audiology",
         "root": "audi = hearing",
         "question": "What does audiology mean?",
-        "options": ["Study of hearing", "Study of animals", "Study of time"],
+        "options": ["Study of animals", "Study of hearing", "Study of time"],
         "answer": "Study of hearing",
         "explanation": "Audi = hearing → study of hearing."
     },
@@ -117,7 +128,7 @@ words = [
         "word": "anthropology",
         "root": "anthrop = human",
         "question": "What does anthropology mean?",
-        "options": ["Study of humans", "Study of sound", "Study of animals"],
+        "options": ["Study of sound", "Study of animals", "Study of humans"],
         "answer": "Study of humans",
         "explanation": "Anthrop = human → study of humans."
     },
@@ -125,7 +136,7 @@ words = [
         "word": "paleoanthropology",
         "root": "paleo = ancient, anthrop = human",
         "question": "What does paleoanthropology mean?",
-        "options": ["Study of ancient humans", "Study of animals", "Study of time"],
+        "options": ["Study of animals", "Study of ancient humans", "Study of time"],
         "answer": "Study of ancient humans",
         "explanation": "Paleo = ancient → ancient humans."
     }
@@ -146,7 +157,7 @@ choice = st.radio(card["question"], card["options"])
 
 if st.button("Check Answer"):
     if choice == card["answer"]:
-        st.success("Correct! Nice work.")
+        st.success("🎉 Correct! Nice work.")
     else:
         st.error("Not quite. Look at the root clue again.")
     st.write(card["explanation"])

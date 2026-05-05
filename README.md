@@ -2,6 +2,12 @@
 
 🔗 **Live App:** https://greek-latin-roots-practice-scfrgm5kpemy9nyd8dezwm.streamlit.app/
 
+<p align="center">
+  <img src="roots-app-preview.png" width="420" alt="Greek and Latin roots practice app interface"/>
+</p>
+
+<p align="center"><em>Interactive vocabulary practice using root-word patterns and immediate feedback.</em></p>
+
 A simple interactive vocabulary practice tool designed to help learners build confidence with Greek and Latin root words through repeated, low-pressure practice.
 
 ---
